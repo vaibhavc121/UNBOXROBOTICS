@@ -10,21 +10,12 @@
         </run>
     </groups>
 
-    <listeners>
-<!--        <listener class-name="utilities.ExtentReportsUtils"></listener>-->
-<!--        <listener class-name="listeners.Listeners"></listener>-->
-    </listeners>
-
-
     <test name="Regression Tests">
         <parameter name="os" value="windows"></parameter>
         <parameter name="browser" value="chrome"></parameter>
 
         <classes>
-
             <class name="testCases.FlipkartTest"/>
-
-
         </classes>
     </test>
 
