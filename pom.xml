@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>UNBOXROBOTICS</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>22</maven.compiler.source>
+        <maven.compiler.target>22</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <build>
+        <!-- To define the plugin version in your parent POM -->
+        <pluginManagement>
+            <plugins>
+
+                <!--For compiling the project and code-->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.13.0</version>
+                </plugin>
+
+                <!--for running the project-->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>3.5.0</version>
+                    <configuration>
+                        <suiteXmlFiles>
+                            <!--suppress UnresolvedMavenProperty -->
+                            <!--<suiteXmlFile>testng-suites/AdhocTestSuite.xml</suiteXmlFile>-->
+                            <!--<suiteXmlFile>testng-suites/APITestSuite.xml</suiteXmlFile>-->
+                            <!--<suiteXmlFile>testng-suites/AzureDevops.xml</suiteXmlFile>-->
+                            <!--<suiteXmlFile>testng-suites/BrowserStack.xml</suiteXmlFile>-->
+                            <!--<suiteXmlFile>testng-suites/CompatibilityTestSuite.xml</suiteXmlFile>-->
+                            <!--<suiteXmlFile>testng-suites/DataDriven TestSuite.xml</suiteXmlFile>-->
+                            <!--<suiteXmlFile>testng-suites/EndToEndTestSuite.xml</suiteXmlFile>-->
+                            <!--<suiteXmlFile>testng-suites/FunctionalTestSuite.xml</suiteXmlFile>-->
+                            <!--<suiteXmlFile>testng-suites/GithubActions.xml</suiteXmlFile>-->
+                            <!--<suiteXmlFile>testng-suites/Grid.xml</suiteXmlFile>-->
+                            <!--<suiteXmlFile>testng-suites/GridDocker.xml</suiteXmlFile>-->
+                            <!--<suiteXmlFile>testng-suites/Grouping.xml</suiteXmlFile>-->
+                            <!--<suiteXmlFile>testng-suites/IntegrationTestSuite.xml</suiteXmlFile>-->
+                            <!--<suiteXmlFile>testng-suites/Jenkins.xml</suiteXmlFile>-->
+                            <!--<suiteXmlFile>testng-suites/MySQLTestSuite.xml</suiteXmlFile>-->
+                            <!--<suiteXmlFile>testng-suites/ParallelTestSuite.xml</suiteXmlFile>-->
+                            <!--<suiteXmlFile>testng-suites/PerformanceTestSuite.xml</suiteXmlFile>-->
+                            <!--<suiteXmlFile>testng-suites/SanityTestSuite.xml</suiteXmlFile>-->
+                            <!--<suiteXmlFile>testng-suites/SecurityTestSuite.xml</suiteXmlFile>-->
+                            <!--<suiteXmlFile>testng-suites/SmokeTestSuite.xml</suiteXmlFile>-->
+                            <!--<suiteXmlFile>testng-suites/UlTestSuite.xml</suiteXmlFile>-->
+                            <!--<suiteXmlFile>testng-suites/CrossBrowserTesting.xml</suiteXmlFile>-->
+                            <!--<suiteXmlFile>testng-suites/SequentialCrossBrowserTestSuite.xml</suiteXmlFile>-->
+                            <!--<suiteXmlFile>testng-suites/MasterTestSuite.xml</suiteXmlFile>-->
+                            <!--<suiteXmlFile>testng-suites/RegressionTestSuite0.xml</suiteXmlFile>-->
+                            <!--<suiteXmlFile>testng-suites/RegressionTestSuite1.xml</suiteXmlFile>-->
+                            <!--<suiteXmlFile>testng-suites/NewTestCasesSuite.xml</suiteXmlFile>-->
+                            <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
+
+                        </suiteXmlFiles>
+                        <!--<argLine>-Djava.awt.headless=true</argLine>  Headless mode for Surefire -->
+                    </configuration>
+                </plugin>
+
+            </plugins>
+        </pluginManagement>
+
+    </build>
+
+    <dependencies>
+
+        <!--
+        https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>4.33.0</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>5.3.0</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>5.3.0</version>
+        </dependency>
+
+        <!--
+        https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.23.1</version>
+        </dependency>
+
+        <!--
+        https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>2.23.1</version>
+        </dependency>
+
+        <!--
+        https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-slf4j-impl -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j-impl</artifactId>
+            <version>2.23.1</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.16.1</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+        <!--used to generate random data-->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.16.0</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.testng/testng -->
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.10.2</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>5.1.2</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-email -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-email</artifactId>
+            <version>1.6.0</version>
+        </dependency>
+
+
+
+
+
+
+
+        <!-- https://mvnrepository.com/artifact/com.github.javafaker/javafaker -->
+        <dependency>
+            <groupId>com.github.javafaker</groupId>
+            <artifactId>javafaker</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+
+        <!--
+        https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+        <!--Jackson library to parse JSON-->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.18.3</version>
+        </dependency>
+
+        <!-- if use the lombok then no need to write getter setters -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.38</version>
+            <scope>provided</scope>
+        </dependency>
+
+
+
+
+    </dependencies>
+
+</project>
