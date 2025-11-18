@@ -49,6 +49,7 @@ public class FlipkartTest extends BaseTest
 
         softAssert.assertTrue(fp.isEmptyCartMessagesDisplay(), "On empty cart messages are not display");
 
+
     }
 
 }

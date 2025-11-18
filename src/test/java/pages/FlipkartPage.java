@@ -17,6 +17,7 @@ public class FlipkartPage extends BasePage
     @FindBy(xpath="//span[@class='BUOuZu']") WebElement result;
 
     @FindBy(xpath = "(//span[contains(text(),'Add to Compare')])[10]") private WebElement ten;
+    @FindBy(xpath = "(//span[contains(text(),'Add to Compare')])[9]") private WebElement nine;
     @FindBy(xpath = "(//span[contains(text(),'Add to Compare')])[11]") private WebElement eleven;
     @FindBy(xpath="//span[contains(text(),'COMPARE')]") WebElement compare;
     @FindBy(xpath="//div[@class='_59SWBg Kns3sd']") WebElement comparePopup;
@@ -61,7 +62,8 @@ public class FlipkartPage extends BasePage
 
     public void scrollPage()
     {
-        scrollIntoView(DriverFactory.getDriver(), ten);
+        scrollIntoView(DriverFactory.getDriver(), nine);
+        //scrollIntoView(DriverFactory.getDriver(), ten);
     }
 
     public void click10thCheckbox()
@@ -95,11 +97,13 @@ public class FlipkartPage extends BasePage
     public void click10thPhone()
     {
         clickOnElement1(tenthPhone);
+        waitTS(2);
     }
 
     public void clickAddToCart()
     {
         clickOnElement1(addToCart);
+        waitTS(2);
     }
 
     public boolean isGoToCartDisplay()
@@ -124,7 +128,7 @@ public class FlipkartPage extends BasePage
 
     public void clickPlusBtn()
     {
-        clickOnElement1(plusBtn);
+        clickElementByJavaScript(DriverFactory.getDriver(),plusBtn);
     }
 
     public boolean isQtyAddMsgDisplay()
@@ -134,7 +138,7 @@ public class FlipkartPage extends BasePage
 
     public void clickRemove()
     {
-        clickOnElement1(remove);
+        clickElementByJavaScript(DriverFactory.getDriver(), remove);
     }
 
     public boolean isRemoveCancelPopupDisplay()

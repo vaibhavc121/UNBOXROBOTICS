@@ -37,6 +37,11 @@ public class BasePage
         element.click();
     }
 
+    public static void clickElementByJavaScript(WebDriver driver, WebElement element)
+    {
+        executeScript(driver, "arguments[0].click();", element);
+    }
+
     public static WebElement waitForElement(WebElement element)
     {
         Wait<WebDriver> fluentWait = new FluentWait<>(DriverFactory.getDriver()).withTimeout(Duration.ofSeconds(10))

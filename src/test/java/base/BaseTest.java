@@ -87,8 +87,6 @@ public class BaseTest
                 case "edge":
                     localDriver = new EdgeDriver();
 
-
-
                 case "firefox":
                     localDriver = new FirefoxDriver();
                     break;
@@ -100,18 +98,13 @@ public class BaseTest
             //driver.set(localDriver); // assign driver to current thread
             DriverFactory.setDriver(localDriver);
         }
-        // region Browser Setup
 
+        // region Browser Setup
         // driver = new ChromeDriver();
         DriverFactory.getDriver().manage().deleteAllCookies();
-
         DriverFactory.getDriver().manage().window().maximize();
-
         DriverFactory.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
         DriverFactory.getDriver().get(p.getProperty("appurl")); // Reading URL from properties file
-
-
         //endregion
 
 
@@ -131,7 +124,7 @@ public class BaseTest
             driver.remove();
         }
        */
-        DriverFactory.cleanupDriver();
+        // DriverFactory.cleanupDriver();
         softAssert.assertAll();
     }
     //endregion
