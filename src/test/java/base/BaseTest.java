@@ -124,7 +124,7 @@ public class BaseTest
             driver.remove();
         }
        */
-        // DriverFactory.cleanupDriver();
+        DriverFactory.cleanupDriver();
         softAssert.assertAll();
     }
     //endregion
