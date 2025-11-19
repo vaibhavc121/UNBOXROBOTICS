@@ -33,35 +33,9 @@
                     <version>3.5.0</version>
                     <configuration>
                         <suiteXmlFiles>
-                            <!--suppress UnresolvedMavenProperty -->
-                            <!--<suiteXmlFile>testng-suites/AdhocTestSuite.xml</suiteXmlFile>-->
-                            <!--<suiteXmlFile>testng-suites/APITestSuite.xml</suiteXmlFile>-->
-                            <!--<suiteXmlFile>testng-suites/AzureDevops.xml</suiteXmlFile>-->
-                            <!--<suiteXmlFile>testng-suites/BrowserStack.xml</suiteXmlFile>-->
-                            <!--<suiteXmlFile>testng-suites/CompatibilityTestSuite.xml</suiteXmlFile>-->
-                            <!--<suiteXmlFile>testng-suites/DataDriven TestSuite.xml</suiteXmlFile>-->
-                            <!--<suiteXmlFile>testng-suites/EndToEndTestSuite.xml</suiteXmlFile>-->
-                            <!--<suiteXmlFile>testng-suites/FunctionalTestSuite.xml</suiteXmlFile>-->
-                            <!--<suiteXmlFile>testng-suites/GithubActions.xml</suiteXmlFile>-->
-                            <!--<suiteXmlFile>testng-suites/Grid.xml</suiteXmlFile>-->
-                            <!--<suiteXmlFile>testng-suites/GridDocker.xml</suiteXmlFile>-->
-                            <!--<suiteXmlFile>testng-suites/Grouping.xml</suiteXmlFile>-->
-                            <!--<suiteXmlFile>testng-suites/IntegrationTestSuite.xml</suiteXmlFile>-->
-                            <!--<suiteXmlFile>testng-suites/Jenkins.xml</suiteXmlFile>-->
-                            <!--<suiteXmlFile>testng-suites/MySQLTestSuite.xml</suiteXmlFile>-->
-                            <!--<suiteXmlFile>testng-suites/ParallelTestSuite.xml</suiteXmlFile>-->
-                            <!--<suiteXmlFile>testng-suites/PerformanceTestSuite.xml</suiteXmlFile>-->
-                            <!--<suiteXmlFile>testng-suites/SanityTestSuite.xml</suiteXmlFile>-->
-                            <!--<suiteXmlFile>testng-suites/SecurityTestSuite.xml</suiteXmlFile>-->
-                            <!--<suiteXmlFile>testng-suites/SmokeTestSuite.xml</suiteXmlFile>-->
-                            <!--<suiteXmlFile>testng-suites/UlTestSuite.xml</suiteXmlFile>-->
-                            <!--<suiteXmlFile>testng-suites/CrossBrowserTesting.xml</suiteXmlFile>-->
-                            <!--<suiteXmlFile>testng-suites/SequentialCrossBrowserTestSuite.xml</suiteXmlFile>-->
-                            <!--<suiteXmlFile>testng-suites/MasterTestSuite.xml</suiteXmlFile>-->
-                            <!--<suiteXmlFile>testng-suites/RegressionTestSuite0.xml</suiteXmlFile>-->
-                            <!--<suiteXmlFile>testng-suites/RegressionTestSuite1.xml</suiteXmlFile>-->
-                            <!--<suiteXmlFile>testng-suites/NewTestCasesSuite.xml</suiteXmlFile>-->
-                            <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
+
+                            <suiteXmlFile>testng.xml</suiteXmlFile>
+                           <!-- <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>-->
 
                         </suiteXmlFiles>
                         <!--<argLine>-Djava.awt.headless=true</argLine>  Headless mode for Surefire -->
@@ -81,6 +55,14 @@
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>4.33.0</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.testng/testng -->
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.10.2</version>
+            <scope>test</scope>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
@@ -136,13 +118,7 @@
             <version>3.16.0</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.testng/testng -->
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>7.10.2</version>
-            <scope>test</scope>
-        </dependency>
+
 
         <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
         <dependency>
@@ -157,12 +133,6 @@
             <artifactId>commons-email</artifactId>
             <version>1.6.0</version>
         </dependency>
-
-
-
-
-
-
 
         <!-- https://mvnrepository.com/artifact/com.github.javafaker/javafaker -->
         <dependency>

@@ -41,7 +41,7 @@ public class BaseTest
 
     //region Setup
     @SuppressWarnings("deprecation")
-    @BeforeClass(groups = {"regression", "datadriven", "functional"})
+    @BeforeClass(groups = {"regression", "functional"})
     @Parameters({"os", "browser"})
     public void setup(String os, String browser) throws IOException
     {
@@ -124,7 +124,7 @@ public class BaseTest
             driver.remove();
         }
        */
-        DriverFactory.cleanupDriver();
+        //DriverFactory.cleanupDriver();
         softAssert.assertAll();
     }
     //endregion
